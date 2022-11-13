@@ -1,10 +1,14 @@
 import './App.css';
 import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, IconButton, Toolbar, Typography, app } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
+import logo from "./assets/img/SpaceStore.jpg";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+// import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 const Login = lazy(() => import("./pages/login/login"));
 const Register = lazy(() => import("./pages/register/register"));
@@ -16,17 +20,44 @@ const NotFound = lazy(() => import("./pages/not-found/not-found"));
 
 function App() {
 
+  
+
+function appBarLabel(label) {
+  return (
+    <Toolbar>
+      <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+        <MenuIcon />
+      </IconButton>
+      <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+        {label}
+      </Typography>
+    </Toolbar>
+  );
+}
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#1976d2',
+    },
+  },
+});
+
   useEffect(() => {
   }, [])
 
   return (
     <Router>
-      <AppBar position={"static"}>
+      <ThemeProvider theme={darkTheme}>
+      <AppBar color='inherit' enableColorOnDark position={"static"}>
+        {/* {appBarLabel('enableColorOnDark')} */}
         <Toolbar
           style={{
             justifyContent: "space-between",
           }}
         >
+        <img src={logo} style={{width: "80px", height:"80px" }}/>
           <Typography variant="h6" component="h2">
             <Link to="/catalog">Space Store</Link>
           </Typography>
@@ -57,6 +88,9 @@ function App() {
           </div>
         </Toolbar>
       </AppBar>
+      </ThemeProvider>
+
+
       <Suspense fallback={"Carregando..."}>
         <Routes>
           <Route exact path="/" element={<Catalog />} />
