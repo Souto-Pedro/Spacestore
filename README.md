@@ -1,26 +1,35 @@
-# Projeto space store reactjs
-Projeto realizado para trabalho de bootcamp Full-stack da faculdade Infnet
+Dev. Full Stack - Projeto 03 - React JS
+Pós-graduações em Tecnologia, Inovação e Negócios Digitais Desenvolvimento Web Full Stack
 
+Disciplina: React JS
 
-Critérios de avaliação
-  <ol>
-    <li>O aluno criou a página de login?</li>
-    <li>O aluno criou a página de registro?</li>
-    <li>O aluno criou a página de catálogo?</li>
-    <li>O aluno criou a página de visualização individual?</li>
-    <li>O aluno adicionou um arquivo externo global ao projeto?</li>
-    <li>O aluno adicionou ao menos uma regra css inline em cada página do projeto?</li>
-    <li>O aluno adicionou um arquivo externo para cada página do projeto?</li>
-    <li>O aluno adicionou uma media query no projeto através de CSS Externo?</li>
-    <li>O aluno adicionou um componente Button no projeto?</li>
-    <li>O aluno adicionou um componente TextField no projeto?</li>
-    <li>O aluno adicionou um componente Stack no projeto?</li>
-    <li>O aluno adicionou um componente Icon no projeto?</li>
-    <li>O aluno adicionou uma rota para a tela de catálogo?</li>
-    <li>O aluno adicionou uma rota para a tela de login?</li>
-    <li>O aluno adicionou uma rota para a tela de registo?</li>
-    <li>O aluno adicionou uma rota para a tela de checkout?</li>
-  </ol>
+Professor: Tiago Luiz Ribeiro da Silva
+
+Aluno: Pedro Lopes Vidal Mercante Souto
+
+Projeto Final da disciplina React JS do curso de Desenvolvedor Web Full Stack do programa de Pósgraduações em Tecnologia, Inovação e Negócios Digitais
+
+Demanda do projeto:
+
+O projeto web consiste em criar uma loja virtual através da utilização da linguagem React JS em com apoio do framework Material UI.
+
+Proposta de desenvolvimento:
+
+Tendo como base o trabalho elaborado nas disciplinas de HTML, CSS e JavaScript (um catálogo web com o tema de espacial) o projeto atual buscou aplicar neste modelo de catálogo a linguagem React JS com a utilização do framework Material UI, buscando a dinamização de todo o HMTL e CSS com ligação ao backend via API.
+
+No desenvolvimento do projeto foram aplicados conceitos como:
+
+React JS
+Framework Material UI
+JSON
+Classes
+Atributos
+Métodos
+Eventos
+Laços de repetição
+Responsividade
+Modais dinâmicos
+Framework Nuka Carousel
 
 # Getting Started with Create React App
   
