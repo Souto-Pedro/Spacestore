@@ -19,17 +19,17 @@ Tendo como base o trabalho elaborado nas disciplinas de HTML, CSS e JavaScript (
 
 No desenvolvimento do projeto foram aplicados conceitos como:
 
-React JS
-Framework Material UI
-JSON
-Classes
-Atributos
-Métodos
-Eventos
-Laços de repetição
-Responsividade
-Modais dinâmicos
-Framework Nuka Carousel
+React JS;
+Framework Material UI;
+JSON;
+Classes;
+Atributos;
+Métodos;
+Eventos;
+Laços de repetição;
+Responsividade;
+Modais dinâmicos;
+Framework Nuka Carousel;
 
 # Getting Started with Create React App
   
