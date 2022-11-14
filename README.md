@@ -1,5 +1,26 @@
-# Projeto loja reactjs
-Projeto feito em sala com a turma de bootcamp Full-stack da faculdade Infnet
+# Projeto space store reactjs
+Projeto realizado para trabalho de bootcamp Full-stack da faculdade Infnet
+
+
+Critérios de avaliação
+  <ol>
+    <li>O aluno criou a página de login?</li>
+    <li>O aluno criou a página de registro?</li>
+    <li>O aluno criou a página de catálogo?</li>
+    <li>O aluno criou a página de visualização individual?</li>
+    <li>O aluno adicionou um arquivo externo global ao projeto?</li>
+    <li>O aluno adicionou ao menos uma regra css inline em cada página do projeto?</li>
+    <li>O aluno adicionou um arquivo externo para cada página do projeto?</li>
+    <li>O aluno adicionou uma media query no projeto através de CSS Externo?</li>
+    <li>O aluno adicionou um componente Button no projeto?</li>
+    <li>O aluno adicionou um componente TextField no projeto?</li>
+    <li>O aluno adicionou um componente Stack no projeto?</li>
+    <li>O aluno adicionou um componente Icon no projeto?</li>
+    <li>O aluno adicionou uma rota para a tela de catálogo?</li>
+    <li>O aluno adicionou uma rota para a tela de login?</li>
+    <li>O aluno adicionou uma rota para a tela de registo?</li>
+    <li>O aluno adicionou uma rota para a tela de checkout?</li>
+  </ol>
 
 # Getting Started with Create React App
   
