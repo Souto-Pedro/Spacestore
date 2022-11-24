@@ -15,23 +15,43 @@ import {
     FilledInput,
     IconButton,
     FormControl,
-    InputLabel
+    InputLabel,
+    
 } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Register = () => {
     const [visibilityToggle, setVisibilityToggle] = useState(false);
+    const [form, setForm] = useState({});
 
     const toggleVisibility = () => {
         setVisibilityToggle(!visibilityToggle);
     }   
+//pegando dados do formulario para o backend
+    const handleChange = (event) => {
+        const {name,value} = event.target 
+        setForm({
+            ...form,
+            [name]: value
+        });
 
-    return <Grid container spacing={2} style={{
+    }
+
+    //criando a função handleSubmit (enviar informações para o backend)
+    const handleSubmit =  async ()=> {
+       const returnBackend = await axios.post("http://localhost:3001/user-api/user",form)
+       console.log(returnBackend.data)
+    }
+    return <div>
+        <pre>{JSON.stringify(form, null, 2)} </pre>
+        <Grid container spacing={2} style={{
         height: '100vh'
     }}>
+        
                 <Grid className='leftSide' item sx={{
                     padding: '10px',
                     boxSizing: 'border-box'
@@ -43,8 +63,9 @@ const Register = () => {
                     }}>
                         <img src={cover} style={{
                             width: '60vw',
-                        }} alt="Logo"/>    
+                        }} alt="SpaceStore.jpg"/>    
                     </Stack>
+
                 </Grid>   
                 <Grid item xs={12} md={5} lg={4}>
                     <Stack spacing={2} style={{
@@ -64,12 +85,17 @@ const Register = () => {
                             <Grid item xs={12} sx={{
                                 marginBottom: '16px'
                             }}>
-                                <TextField fullWidth label="Usuário" type="text" variant="outlined" />
+                                <TextField fullWidth name="name" label="Name" type="text" variant="outlined" onChange={(event) => handleChange(event)}  />
                             </Grid>
                             <Grid item xs={12} sx={{
                                 marginBottom: '16px'
                             }}>
-                                <TextField fullWidth label="E-mail" type="email" variant="outlined" />
+                                <TextField fullWidth name="surename" label="Surename" type="text" variant="outlined" onChange={(event) => handleChange(event)}  />
+                            </Grid>
+                            <Grid item xs={12} sx={{
+                                marginBottom: '16px'
+                            }}>
+                                <TextField fullWidth name="email" label="E-mail" type="email" variant="outlined" onChange={(event) => handleChange(event)}  />
                             </Grid>
                             <Grid item xs={12} sx={{
                                 marginBottom: '16px'
@@ -80,6 +106,7 @@ const Register = () => {
                                         color="primary"
                                         fullWidth 
                                         label="Senha"
+                                        name="password"
                                         type={visibilityToggle ? 'text' : 'password'}
                                         endAdornment={<InputAdornment position="end">
                                             <IconButton
@@ -100,14 +127,18 @@ const Register = () => {
                                 <TextField  
                                     color="primary"
                                     fullWidth 
+                                    name="password"
                                     label="Confirmar senha"
                                     type={visibilityToggle ? 'text' : 'password'}
-                                    variant="outlined" />
+                                    variant="outlined"
+                                    onChange={(event) => handleChange(event)} 
+                                    />
+
                             </Grid>
                             <Grid item xs={12} sx={{
                                 marginBottom: '16px'
                             }}>
-                                <Button fullWidth variant="contained" endIcon={<LoginIcon />}>Registrar</Button>
+                                <Button fullWidth variant="contained" onClick={handleSubmit} endIcon={<LoginIcon />}>Registrar</Button>
                             </Grid>
                             <Link 
                             style={{
@@ -120,6 +151,7 @@ const Register = () => {
                     </Stack>
                 </Grid>   
            </Grid>
+           </div>
 }
 
 export default Register;
